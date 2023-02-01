@@ -1,4 +1,4 @@
-.Categories {
+.Collection {
     margin-top: 40px;
     .header {
         display: flex;
@@ -70,7 +70,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .Categories {
+    .Collection {
         .header {
             flex-direction: column;
             gap: 20px;
