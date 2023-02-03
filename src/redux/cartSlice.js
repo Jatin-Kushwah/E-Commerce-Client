@@ -39,6 +39,11 @@ const cartSlice = createSlice({
                 state.cart[index].quantity -= 1;
             }
         },
+        removeItemFromCart: (state, action) => {
+            const curKey =
+                action.payload?.attributes?.key || action.payload.key;
+            state.cart = state.cart.filter((item) => item.key !== curKey);
+        },
         resetCart: (state, action) => {
             state.cart = [];
         },
@@ -47,4 +52,5 @@ const cartSlice = createSlice({
 
 export default cartSlice.reducer;
 
-export const { addToCart, removeFromCart, resetCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, resetCart, removeItemFromCart } =
+    cartSlice.actions;
