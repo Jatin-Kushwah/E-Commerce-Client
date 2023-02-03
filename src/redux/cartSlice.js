@@ -39,7 +39,6 @@ const cartSlice = createSlice({
                 state.cart[index].quantity -= 1;
             }
         },
-        // create an action to removeCartItem
         resetCart: (state, action) => {
             state.cart = [];
         },

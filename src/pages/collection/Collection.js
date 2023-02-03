@@ -19,7 +19,7 @@ function Collection() {
         },
         {
             value: "Newest First",
-            sort: "createdAt",
+            sort: "createdAt:desc",
         },
     ];
 

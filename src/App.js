@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { fetchCategories } from "./redux/categorySlice";
 import ProductDetail from "./pages/productDetail/ProductDetail";
 import Collection from "./pages/collection/Collection";
+import Payments from "./components/payments/Payments";
 
 function App() {
     const dispatch = useDispatch();
@@ -29,6 +30,7 @@ function App() {
                         path="/products/:productId"
                         element={<ProductDetail />}
                     />
+                    <Route path="/payments/:status" element={<Payments />} />
                 </Routes>
             </main>
 
